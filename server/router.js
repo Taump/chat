@@ -55,7 +55,7 @@ router.post('/reg', async(req, res)=>{
     try{
         let user = await UsersModel.findOne({username: {$regex: _.escapeRegExp(req.body.r_name), $options: "i"}}).lean().exec();
         if(user !=void(0)){
-            return res.status(500);
+            res.redirect('/reg');
         } else{
             user = await UsersModel.create({
                 username: req.body.r_name,
