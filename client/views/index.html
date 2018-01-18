@@ -1,0 +1,29 @@
+{% extends "base.html" %}
+{% block main %}
+<div class="grid-container">
+    <div class="row">
+        <div class="large-4">
+            {% if login %}
+            <div class="callout success">
+                Добро пожаловать в чат, {{name}}.
+            </div>
+            <div class="callout">
+                <div id="chat" class="chat">
+                    <!--Здесь вывод постов в client.js-->
+                </div>
+                <div class="controls">
+                    <form action="">
+                        <textarea class="msg" placeholder="Message" id="msg_text"></textarea>
+                        <input type="submit" class="button" id="addMsg">
+                    </form>
+                </div>
+            </div>
+            {% else %}
+            <div class="callout alert">
+                Please <a href="/login">sign in</a>. If you do not have an account, <a href="/reg">register</a>.
+            </div>
+            {% endif %}
+        </div>
+    </div>
+</div>
+{% endblock %}

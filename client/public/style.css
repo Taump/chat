@@ -1,0 +1,24 @@
+.chat{
+    height: 400px;
+    overflow-y: auto;
+}
+.top-bar{
+    margin-bottom: 50px;
+}
+.msg{
+    margin-top: 25px;
+}
+.message p{
+    margin-bottom: 10px;
+}
+.user_info{
+    border-top: 1px solid #ccc;
+    padding-top: 10px;
+    font-size: 12px;
+}
+.user_info strong{
+    margin-right: 10px;
+}
+time{
+    color: #cccccc;
+}

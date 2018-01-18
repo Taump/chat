@@ -1,0 +1,21 @@
+{% extends "base.html" %}
+
+{% block main %}
+<div class="grid-container">
+    <div class="row">
+        <div class="large-4">
+            <div class="callout">
+                <h3>Create an account</h3>
+                <form action="/reg" method="post">
+                    <input type="text" placeholder="Username" name="r_name">
+                    <label>Password
+                        <input type="password" aria-describedby="passwordHelpText" name="r_pass">
+                    </label>
+                    <p class="help-text" id="passwordHelpText">Your password must have at least 10 characters, a number, and an Emoji.</p>
+                    <input type="submit" value="Registration" class="button">
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}

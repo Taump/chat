@@ -1,0 +1,49 @@
+<!doctype html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>{{title}}</title>
+    <script src="/socket.io/socket.io.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/foundation/6.4.3/css/foundation.min.css"
+          integrity="" crossorigin="anonymous"/>
+    <link rel="stylesheet" href="/assets/style.css">
+</head>
+<body>
+<div class="top-bar" id="responsive-menu">
+    <div class="top-bar-left">
+        <ul class="dropdown menu" data-dropdown-menu>
+            <li class="menu-text">NodeJS Chat</li>
+            <li><a href="/">Chat</a></li>
+            <li><a href="/">Github link</a></li>
+        </ul>
+    </div>
+    <div class="top-bar-right">
+        <ul class="menu">
+            
+            {% if login %}
+            <li><a href="/logout">Exit</a></li>
+            {% else %}
+            <li><a href="/login">Login</a></li>
+            <li><a href="/reg">Registration</a></li>
+            {% endif %}
+        </ul>
+    </div>
+</div>
+
+{% block main %}
+
+{% endblock %}
+
+
+{% if login %}
+<script src="/assets/jquery-3.2.1.min.js"></script>
+<script src="/assets/client.js"></script>
+{% else %}
+<script src="/assets/guest.js"></script>
+{% endif %}
+
+</body>
+</html>

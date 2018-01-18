@@ -1,0 +1,18 @@
+{% extends "base.html" %}
+
+{% block main %}
+<div class="grid-container">
+    <div class="row">
+        <div class="large-4">
+            <div class="callout">
+                <h3>Sign in to your account</h3>
+                <form action="/login" method="post">
+                    <input type="text" placeholder="Username"  name="l_name">
+                    <input type="password" placeholder="Password" name="l_pass">
+                    <input type="submit" value="Sign in" class="button">
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}
